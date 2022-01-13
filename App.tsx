@@ -27,6 +27,14 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {AkahuClient} from 'akahu';
+
+export const akahuClient = new AkahuClient({
+  // Configure your app token here.
+  // App secret is not required and should not be included client-side.
+  appToken: 'appToken',
+});
+
 const Section: React.FC<{
   title: string;
 }> = ({children, title}) => {
